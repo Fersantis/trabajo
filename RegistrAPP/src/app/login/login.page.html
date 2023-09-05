@@ -1,0 +1,23 @@
+
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>RegistrAPP</ion-card-title>
+    
+    </ion-card-header>
+  
+    <ion-card-content>
+
+      
+     
+      <ion-input label="Alumno" [(ngModel)]="inputValue" labelPlacement="stacked" placeholder="Ingrese usuario" ></ion-input>
+      <ion-input label="Password"  labelPlacement="stacked" placeholder="Ingrese contraseña" type="Password" ></ion-input>
+      <ion-button  color="secondary" expand="block"(click)="Ingresar()">Ingresar</ion-button>
+    
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
