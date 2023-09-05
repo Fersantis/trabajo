@@ -4,6 +4,10 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { LoginPage } from './login.page';
 
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
+
 import { LoginPageRoutingModule } from './login-routing.module';
 
 
@@ -12,7 +16,8 @@ import { LoginPageRoutingModule } from './login-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    LoginPageRoutingModule
+    LoginPageRoutingModule,
+    MatButtonModule, MatDividerModule, MatIconModule,
   ],
   declarations: [LoginPage]
 })
