@@ -10,11 +10,11 @@
   
     <ion-card-content>
 
-      <h1>Hola</h1>
-     
-      <ion-input label="Alumno" [(ngModel)]="inputValue" labelPlacement="stacked" placeholder="Ingrese usuario" ></ion-input>
-      <ion-input label="Password"  labelPlacement="stacked" placeholder="Ingrese contraseña" type="Password" ></ion-input>
-      <ion-button  color="secondary" expand="block"(click)="Ingresar()">Ingresar</ion-button>
+      
+      <ion-text color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-text>
+      <ion-input label="Alumno" [(ngModel)]="inputValue" (input)="checkFieldLength()" labelPlacement="stacked" placeholder="Ingrese usuario"  minlength="1" ></ion-input>
+      <ion-input label="Password" [(ngModel)]="inputValue2" (input)="checkFieldLength2()"  labelPlacement="stacked" placeholder="Ingrese contraseña" type="Password" minlength="1" ></ion-input>
+      <ion-button  color="secondary" [disabled]="shouldDisableButton()" expand="block"(click)="Ingresar()">Ingresar</ion-button>
     
     </ion-card-content>
   </ion-card>
