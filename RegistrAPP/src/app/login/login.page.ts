@@ -39,5 +39,6 @@ export class LoginPage {
       queryParams: {
         value: this.inputValue,},});
   }
+  
  
 }
