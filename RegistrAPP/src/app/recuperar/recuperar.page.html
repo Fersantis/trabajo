@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      RegistrAPP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">RegistrAPP</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card-content>
+    <ion-input label="Alumno"  labelPlacement="stacked" placeholder="Ingrese usuario"  minlength="1" ></ion-input>
+    <ion-input label="Password" [  labelPlacement="stacked" placeholder="Ingrese contraseña" type="Password" minlength="1" ></ion-input>
+    <ion-button  color="secondary" [disabled]="shouldDisableButton()" expand="block"(click)="Ingresar()">Ingresar</ion-button>
+  </ion-card-content>
+</ion-content>
