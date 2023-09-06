@@ -34,10 +34,11 @@ export class LoginPage {
   }
 
   constructor(private navCtrl: NavController) {}
-  Ingresar(){
+    Ingresar(){
     this.navCtrl.navigateForward('/home', {
       queryParams: {
         value: this.inputValue,},});
+
   }
   
  

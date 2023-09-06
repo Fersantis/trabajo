@@ -17,3 +17,4 @@ import { RecuperarPageRoutingModule } from './recuperar-routing.module';
   declarations: [RecuperarPage]
 })
 export class RecuperarPageModule {}
+
