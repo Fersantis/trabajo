@@ -8,8 +8,7 @@
 
 <ion-content>
   <ion-item>
-    <ion-label position="floating">Correo Electrónico</ion-label>
-    <ion-input [(ngModel)]="email" type="email"></ion-input>
+    <ion-input label="Alumno" [(ngModel)]="inputValue" (input)="checkFieldLength()" labelPlacement="stacked" placeholder="Ingrese usuario"  minlength="1" ></ion-input>
   </ion-item>
 
   <ion-button expand="full" (click)="recuperar()">Recuperar Contraseña</ion-button>

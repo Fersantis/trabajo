@@ -40,6 +40,12 @@ export class LoginPage {
         value: this.inputValue,},});
 
   }
+
+  constructor(private navCtrl2: NavController) {}
+    Recuperar(){
+    this.navCtrl.navigateForward('/recuperar');
+
+  }
   
  
 }
