@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
+
 import { Router } from '@angular/router';
 
 @Component({
@@ -37,7 +37,9 @@ export class LoginPage {
   constructor(private router: Router) {}
 
   Ingresar() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/home', {
+      queryParams: {
+        value: this.inputValue,},}]);
   }
   
   Recuperarcontrasena() {
