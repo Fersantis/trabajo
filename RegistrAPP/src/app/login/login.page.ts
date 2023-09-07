@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -34,18 +34,16 @@ export class LoginPage {
     }
   }
 
-  constructor(private router: Router) {}
 
-  Ingresar() {
-    this.router.navigate(['/home', {
+
+  constructor(private navCtrl: NavController) {}
+  Ingresar(){
+    this.navCtrl.navigateForward('/home', {
       queryParams: {
-        value: this.inputValue,},}]);
+        value: this.inputValue,},});
   }
-  
   Recuperarcontrasena() {
-    this.router.navigate(['/recuperar']);
+    this.navCtrl.navigateForward(['/recuperar']);
   }
-
-
  
 }

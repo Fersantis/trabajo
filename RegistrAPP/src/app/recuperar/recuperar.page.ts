@@ -20,9 +20,6 @@ export class  RecuperarPage {
     }
   }
 
-
-  
-
   constructor(private router: Router) {
     // Constructor del componente de recuperación de contraseña
   }
@@ -31,7 +28,7 @@ export class  RecuperarPage {
     // Lógica para recuperar la contraseña
   
     // Redireccionar a la página de inicio de sesión (login)
-    this.router.navigate(['/login']);
+    this.router.navigate(['login']);
   }
 
 }
