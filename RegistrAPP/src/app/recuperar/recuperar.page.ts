@@ -20,9 +20,8 @@ export class  RecuperarPage {
     }
   }
 
-  shouldDisableButton(): boolean {
-    return this.inputValue4.length < 1;
-  }
+
+  
 
   constructor(private router: Router) {
     // Constructor del componente de recuperación de contraseña

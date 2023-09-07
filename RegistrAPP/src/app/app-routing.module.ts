@@ -28,7 +28,11 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+  ,
+
+      RecuperarPageModule // Asegúrate de que el módulo se importe aquí
   ],
+
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

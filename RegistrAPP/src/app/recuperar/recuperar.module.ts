@@ -6,6 +6,7 @@ import { RecuperarPage } from './recuperar.page';
 
 import { RecuperarPageRoutingModule } from './recuperar-routing.module';
 
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   imports: [
