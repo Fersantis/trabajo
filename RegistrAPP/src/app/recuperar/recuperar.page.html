@@ -8,8 +8,8 @@
 
 <ion-content>
   <ion-item>
-    <ion-input label="Alumno" [(ngModel)]="inputValue" (input)="checkFieldLength()" labelPlacement="stacked" placeholder="Ingrese usuario"  minlength="1" ></ion-input>
+    <ion-input label="Alumno" [(ngModel)]="inputValue4" (input)="checkFieldLength()" labelPlacement="stacked" placeholder="Ingrese usuario"  minlength="1" ></ion-input>
   </ion-item>
 
-  <ion-button expand="full" (click)="recuperar()">Recuperar Contraseña</ion-button>
+  <ion-button expand="full" [disabled]="shouldDisableButton()" (click)="recuperarContrasena()">Recuperar Contraseña</ion-button>
 </ion-content>

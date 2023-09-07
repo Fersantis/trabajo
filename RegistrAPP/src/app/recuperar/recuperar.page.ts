@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,12 +8,12 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['recuperar.page.scss'],
 })
 export class  RecuperarPage {
-  inputValue: string ='';
+  inputValue4: string ='';
   errorMessage: string = '';
 
 
   checkFieldLength() {
-    if (this.inputValue.length < 1) {
+    if (this.inputValue4.length < 1) {
       this.errorMessage = 'Debe ingresar al menos 1 dato';
     } else {
       this.errorMessage = '';
@@ -21,15 +21,22 @@ export class  RecuperarPage {
   }
 
   shouldDisableButton(): boolean {
-    return this.inputValue.length < 1;
+    return this.inputValue4.length < 1;
   }
 
-  constructor(private navCtrl: NavController) {}
-  recuperar(){
-  this.navCtrl.navigateForward('/login');
+  constructor(private router: Router) {
+    // Constructor del componente de recuperación de contraseña
+  }
+
+  recuperarContrasena() {
+    // Lógica para recuperar la contraseña
+  
+    // Redireccionar a la página de inicio de sesión (login)
+    this.router.navigate(['/login']);
+  }
 
 }
 
-    }
+  
 
 

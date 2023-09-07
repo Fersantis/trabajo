@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RecuperarPageModule } from './recuperar/recuperar.module';
+import { LoginPage } from './login/login.page';
+
 
 const routes: Routes = [
 
@@ -14,6 +17,11 @@ const routes: Routes = [
   {
     path: 'access',
     loadChildren: () => import('./access/access.module').then( m => m.AccessPageModule)
+  },
+
+  {
+    path: 'recuperar',
+    loadChildren: () => import('./recuperar/recuperar.module').then(m => m.RecuperarPageModule)
   },
 ];
 

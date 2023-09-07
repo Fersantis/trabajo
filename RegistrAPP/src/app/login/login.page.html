@@ -14,12 +14,12 @@
       <ion-text color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-text>
       <ion-input label="Alumno" [(ngModel)]="inputValue" (input)="checkFieldLength()" labelPlacement="stacked" placeholder="Ingrese usuario"  minlength="1" ></ion-input>
       <ion-input label="Password" [(ngModel)]="inputValue2" (input)="checkFieldLength2()"  labelPlacement="stacked" placeholder="Ingrese contraseña" type="Password" minlength="1" ></ion-input>
-      <ion-button  color="secondary" [disabled]="shouldDisableButton()" size="default" (click)="Ingresar()">Ingresar</ion-button>
+      <ion-button color="secondary" [disabled]="shouldDisableButton()" size="default" (click)="Ingresar()">Ingresar</ion-button>
 
     </ion-card-content>
 
     <ion-card-content>
-      <ion-button  fill="clear"  size="default" (click)="Recuperar()" >Recuperar contraseña</ion-button>
+      <ion-button fill="clear" size="default" (click)="Recuperarcontrasena()">Recuperar contraseña</ion-button>
     </ion-card-content>
 
   </ion-card>
