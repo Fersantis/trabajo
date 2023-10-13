@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-home',
@@ -8,13 +9,20 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  nombreUsuario: string;
-  constructor(private route: ActivatedRoute, private modalCtrl: ModalController) {
-    this.nombreUsuario = this.route.snapshot.queryParams['value'];}
-    isModalOpen = false;
 
-    setOpen(isOpen: boolean) {
-      this.isModalOpen = isOpen;
-    }
+   state: any;
 
-}
+   user: any;
+
+
+  
+   constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+    this.activatedRoute.queryParams.subscribe(params => {
+      if (this.router.getCurrentNavigation().extras.state) {
+        this.state = this.router.getCurrentNavigation().extras.state;
+        this.user = this.state.user;
+        console.log(this.user);
+      }
+    });
+  }
+ }
