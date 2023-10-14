@@ -12,6 +12,7 @@ export class AsistenciaService {
   getDatos(): Observable<any> {
     // Realiza la solicitud HTTP utilizando el HttpClient
     // Por ejemplo, aquí se realiza una solicitud GET a una URL determinada
-    return this.http.get<any>('https://api.example.com/datos');
+    const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+    return this.http.get<any>(apiUrl);
   }
 }
