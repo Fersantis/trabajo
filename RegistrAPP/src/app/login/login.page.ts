@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { NavController } from '@ionic/angular';
 
+import { AsistenciaService } from '../asistencia.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: 'login.page.html',
@@ -36,11 +38,27 @@ export class LoginPage {
 
 
 
-  constructor(private navCtrl: NavController) {}
-  Ingresar(){
-    this.navCtrl.navigateForward('/home', {
-      queryParams: {
-        value: this.inputValue,},});
+  constructor(private navCtrl: NavController, private asistenciaService: AsistenciaService) {}
+  Ingresar() {
+    this.asistenciaService.getDatos().subscribe(
+      (response) => {
+        console.log(response);
+        // Realiza las acciones necesarias con la respuesta de la API
+        // Por ejemplo, podrías almacenar los datos del usuario en una variable y pasarlos a la página de inicio
+        const userData = {
+          username: this.inputValue,
+          password: this.inputValue2,
+          // Puedes agregar más propiedades según la respuesta de la API
+        };
+        this.navCtrl.navigateForward('/home', {
+          state: { user: userData }
+        });
+      },
+      (error) => {
+        console.error(error);
+        // Maneja el error de la solicitud a la API
+      }
+    );
   }
   Recuperarcontrasena() {
     this.navCtrl.navigateForward(['/recuperar']);

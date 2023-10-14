@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ModalController } from '@ionic/angular';
+
+import { AsistenciaService } from '../asistencia.service';
+
 
 
 @Component({
@@ -16,10 +18,11 @@ export class HomePage {
 
 
   
-   constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+   constructor(private activatedRoute: ActivatedRoute, private router: Router
+    , private asistenciaService: AsistenciaService) {
     this.activatedRoute.queryParams.subscribe(params => {
-      if (this.router.getCurrentNavigation().extras.state) {
-        this.state = this.router.getCurrentNavigation().extras.state;
+      if (this.router.getCurrentNavigation()?.extras.state) {
+        this.state = this.router.getCurrentNavigation()?.extras.state;
         this.user = this.state.user;
         console.log(this.user);
       }
