@@ -21,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
-    HttpClientModule // Agrega HttpClientModule aquí
+    HttpClientModule
   ],
   declarations: [LoginPage]
 })
