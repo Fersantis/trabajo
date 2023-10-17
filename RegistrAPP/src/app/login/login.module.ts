@@ -12,6 +12,10 @@ import { LoginPageRoutingModule } from './login-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import {NgFor} from '@angular/common';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {ThemePalette} from '@angular/material/core';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -21,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCheckboxModule, NgFor
   ],
   declarations: [LoginPage]
 })
