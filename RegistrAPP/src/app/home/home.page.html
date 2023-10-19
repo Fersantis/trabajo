@@ -17,6 +17,15 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Logo_DuocUC.svg"/>
     <ion-card-header>
       <ion-card-title>Bienvenido {{ user.username }}</ion-card-title>
+      <ion-card-content>
+
+        <div *ngFor="let item of datos">
+          <p>{{ item.nombre }}</p>
+          <p>{{ item.apellido }}</p>
+          <p>{{ item.correo }}</p>
+          
+        </div>
+      </ion-card-content>
     </ion-card-header>
   </ion-card>
 
