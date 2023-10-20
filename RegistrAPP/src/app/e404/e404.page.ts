@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IonHeader, IonToolbar } from '@ionic/angular';
 
 @Component({
   selector: 'app-e404',

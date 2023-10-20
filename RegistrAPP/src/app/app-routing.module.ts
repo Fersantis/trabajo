@@ -3,6 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { RecuperarPageModule } from './recuperar/recuperar.module';
 import { LoginPage } from './login/login.page';
 import { PagePortegidoGuard } from './guards/page-portegido.guard';
+import { E404Page } from './e404/e404.page';
 
 
 
