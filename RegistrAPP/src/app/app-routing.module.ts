@@ -4,6 +4,7 @@ import { RecuperarPageModule } from './recuperar/recuperar.module';
 import { LoginPage } from './login/login.page';
 
 
+
 const routes: Routes = [
 
   {
