@@ -8,7 +8,7 @@ import { RecuperarPageRoutingModule } from './recuperar-routing.module';
 
 import { RouterModule, Routes } from '@angular/router';
 
-@NgModule({
+@NgModule({ 
   imports: [
     CommonModule,
     FormsModule,

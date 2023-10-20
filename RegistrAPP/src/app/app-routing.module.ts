@@ -24,17 +24,24 @@ const routes: Routes = [
   },
   {
     path: 'recuperar',
-    loadChildren: () => import('./recuperar/recuperar.module').then((m) => m.RecuperarPageModule)
+    loadChildren: () => import('./recuperar/recuperar.module').then((m) => m.RecuperarPageModule),
+    canActivate: [PagePortegidoGuard]
+  },
+  
+  {
+    path: 'recuperacion',
+    loadChildren: () => import('./recuperacion/recuperacion.module').then( m => m.RecuperacionPageModule)
   },
   {
     path: 'e404', // Agrega la ruta para la página de error 404 si no la has definido
-    component: E404Page // Asegúrate de que E404Page esté importado correctamente
+  
+    loadChildren: () => import('./e404/e404.module').then((m) => m.E404PageModule)
   },
   {
     path: '**',
-    redirectTo: 'e404', // Redirige a la página de error 404 en caso de rutas no encontradas
-    pathMatch: 'full'
+    loadChildren: () => import('./e404/e404.module').then((m) => m.E404PageModule)
   }
+
 ];
 
 @NgModule({

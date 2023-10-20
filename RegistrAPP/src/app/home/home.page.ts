@@ -21,7 +21,9 @@ export class HomePage {
 
    
    constructor(private activatedRoute: ActivatedRoute, 
+
     private apiService: ApiService,private router: Router
+    
     , private asistenciaService: AsistenciaService) {
     this.activatedRoute.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation()?.extras.state) {
