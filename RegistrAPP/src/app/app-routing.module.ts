@@ -4,6 +4,8 @@ import { RecuperarPageModule } from './recuperar/recuperar.module';
 import { LoginPage } from './login/login.page';
 
 
+
+
 const routes: Routes = [
 
   {
@@ -22,14 +24,15 @@ const routes: Routes = [
     path: 'access',
     loadChildren: () => import('./access/access.module').then( m => m.AccessPageModule)
   },
-
+  
   {
     path: 'recuperar',
     loadChildren: () => import('./recuperar/recuperar.module').then(m => m.RecuperarPageModule)
   },
- 
-
-];
+  {path: '**',
+  redirectTo:'e404',
+  pathMatch:'full'},
+]
 
 @NgModule({
   imports: [
@@ -42,3 +45,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
