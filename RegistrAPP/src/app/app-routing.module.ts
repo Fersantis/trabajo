@@ -5,7 +5,6 @@ import { LoginPage } from './login/login.page';
 
 
 
-
 const routes: Routes = [
 
   {
