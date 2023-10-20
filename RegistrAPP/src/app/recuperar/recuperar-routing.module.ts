@@ -4,7 +4,7 @@ import { RecuperarPage } from './recuperar.page';
 
 const routes: Routes = [
   {
-    path: 'recuperar',
+    path: '',
     component: RecuperarPage,
   }
 ];

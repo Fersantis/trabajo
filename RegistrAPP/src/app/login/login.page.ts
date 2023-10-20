@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
-import { NavController } from '@ionic/angular';
+import { Router, NavigationExtras } from '@angular/router';
 
 import { AsistenciaService } from '../asistencia.service';
 import { ApiService } from './api.service';
 
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -22,6 +22,7 @@ export class LoginPage {
   state: any;
 
   user: any;
+
 
   checkFieldLength() {
     if (this.inputValue.length < 1) {
@@ -45,7 +46,7 @@ export class LoginPage {
 
 
  
-  constructor(private navCtrl: NavController,
+  constructor(
      private apiService: ApiService,
      private asistenciaService: AsistenciaService, 
      private activatedRoute: ActivatedRoute,
@@ -84,23 +85,27 @@ export class LoginPage {
         // Si son iguales, hacer algo
         console.log('Los datos son iguales');
         
-        this.navCtrl.navigateForward('/home', {
-          state: { user:userInputUsername }
-        });
+       
         // Realiza las acciones necesarias cuando los datos son iguales
         const userData = {
           username: apiUsername,
           password: apiPassword
           // Puedes agregar más propiedades según la respuesta de la API
         };
-        this.navCtrl.navigateForward('/home', {
-state: { user: userData }
-        });
+        const navigationExtras: NavigationExtras = {
+          state: {
+            user: userData,
+          },
+        };
+
+        this.router.navigate(['/home'], navigationExtras);
+
       } else {
         // Si son diferentes, hacer otra cosa
+        
         console.log('Los datos son diferentes');
-        // Realiza las acciones necesarias cuando los datos son diferentes
-        // Por ejemplo, mostrar un mensaje de error al usuario
+          // Maneja el caso cuando los datos no son iguales (por ejemplo, muestra un mensaje de error al usuario)
+          this.errorMessage = 'Los datos ingresados son incorrectos';
       }
     },
     (error) => {
@@ -112,7 +117,8 @@ state: { user: userData }
   }
 
   Recuperarcontrasena() {
-    this.navCtrl.navigateForward(['/recuperacion']);
+    console.log('llegue');
+    this.router.navigate(['/recuperacion']);
   }
  
 }

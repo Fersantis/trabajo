@@ -5,11 +5,7 @@ import { E404Page } from './e404/e404.page'; // Asegúrate de que E404Page esté
 import { Route } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then((m) => m.HomePageModule),
-    canActivate: [PagePortegidoGuard] // Asegúrate de que el guard esté correctamente implementado
-  },
+
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then((m) => m.LoginPageModule)
@@ -23,15 +19,23 @@ const routes: Routes = [
     loadChildren: () => import('./access/access.module').then((m) => m.AccessPageModule)
   },
   {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then((m) => m.HomePageModule),
+    canActivate: [PagePortegidoGuard] // Asegúrate de que el guard esté correctamente implementado
+  },
+
+  {
+    path: 'recuperacion',
+    loadChildren: () => import('./recuperacion/recuperacion.module').then( m => m.RecuperacionPageModule)
+  },
+  
+  {
     path: 'recuperar',
     loadChildren: () => import('./recuperar/recuperar.module').then((m) => m.RecuperarPageModule),
     canActivate: [PagePortegidoGuard]
   },
   
-  {
-    path: 'recuperacion',
-    loadChildren: () => import('./recuperacion/recuperacion.module').then( m => m.RecuperacionPageModule)
-  },
+
   {
     path: 'e404', // Agrega la ruta para la página de error 404 si no la has definido
   
