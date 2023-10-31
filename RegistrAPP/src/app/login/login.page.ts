@@ -118,7 +118,7 @@ export class LoginPage {
 
   Recuperarcontrasena() {
     console.log('llegue');
-    this.router.navigate(['/recuperacion']);
+    this.router.navigate(['/recuperar']);
   }
  
 }
