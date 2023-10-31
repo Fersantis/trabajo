@@ -16,6 +16,9 @@ import {NgFor} from '@angular/common';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {ThemePalette} from '@angular/material/core';
 
+import { Storage } from '@ionic/storage-angular';
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -28,6 +31,7 @@ import {ThemePalette} from '@angular/material/core';
     HttpClientModule,
     MatCheckboxModule, NgFor
   ],
-  declarations: [LoginPage]
+  declarations: [LoginPage],
+  providers: [Storage]
 })
 export class LoginPageModule {}

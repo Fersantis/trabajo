@@ -13,10 +13,10 @@
     <ion-card-content>
 
       
-      <ion-text color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-text>
-      <ion-input label="Alumno" [(ngModel)]="inputValue" (input)="checkFieldLength()" labelPlacement="stacked" placeholder="Ingrese usuario"  minlength="1" ></ion-input>
-      <ion-input label="Password" [(ngModel)]="inputValue2" (input)="checkFieldLength2()"  labelPlacement="stacked" placeholder="Ingrese contraseña" type="Password" minlength="1" ></ion-input>
-      <ion-button color="secondary" [disabled]="shouldDisableButton()" size="default" (click)="Ingresar()">Ingresar</ion-button> <mat-checkbox class="example-margin">Recordarme</mat-checkbox>
+    
+      <ion-input label="Alumno" [(ngModel)]="inputValue" labelPlacement="stacked" placeholder="Ingrese usuario"  minlength="1" ></ion-input>
+      <ion-input label="Password" [(ngModel)]="inputValue2"   labelPlacement="stacked" placeholder="Ingrese contraseña" type="Password" minlength="1" ></ion-input>
+      <ion-button color="secondary"  size="default" (click)="Ingresar()">Ingresar</ion-button> <mat-checkbox class="example-margin">Recuerdame</mat-checkbox>
 
 
     </ion-card-content>
