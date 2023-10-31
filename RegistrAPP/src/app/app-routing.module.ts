@@ -23,11 +23,6 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then((m) => m.HomePageModule),
     canActivate: [PagePortegidoGuard] // Asegúrate de que el guard esté correctamente implementado
   },
-
-  {
-    path: 'recuperacion',
-    loadChildren: () => import('./recuperacion/recuperacion.module').then( m => m.RecuperacionPageModule)
-  },
   
   {
     path: 'recuperar',
