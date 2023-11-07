@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Registro
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+
+  <ion-card>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Logo_DuocUC.svg"/>
+
+    <ion-card-header>
+      <ion-card-title>Ingrese sus credenciales</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-input label="Docente" labelPlacement="stacked" placeholder="Ingrese usuario" ></ion-input>
+      <ion-input label="Password"  labelPlacement="stacked" placeholder="Ingrese contraseña" type="Password"  ></ion-input>
+      <ion-button color="secondary"  size="default" (click)="Generarcodigo()" >Ingresar</ion-button>
+
+      <ion-card-content>
+    
+        <button mat-button color="warn" >Recuperar contraseña</button>
+      </ion-card-content>
+
+  </ion-card-content>
+
+  </ion-card>
+</ion-content>
