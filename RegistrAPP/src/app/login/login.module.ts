@@ -17,7 +17,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {ThemePalette} from '@angular/material/core';
 
 import { Storage } from '@ionic/storage-angular';
-
+import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
   imports: [
@@ -29,7 +29,8 @@ import { Storage } from '@ionic/storage-angular';
     MatDividerModule,
     MatIconModule,
     HttpClientModule,
-    MatCheckboxModule, NgFor
+    MatCheckboxModule, NgFor,
+    QRCodeModule,
   ],
   declarations: [LoginPage],
   providers: [Storage]

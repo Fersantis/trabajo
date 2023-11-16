@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { AsistenciaService } from '../asistencia.service';
 import { ApiService } from './api.service';
+import { SafeUrl } from '@angular/platform-browser';
 
 
 
@@ -18,8 +19,7 @@ export class HomePage {
     user: any;
   
     datos: any[] | undefined;
-    myAngularxQrCode: any;
-    
+    qrCodeStr: any;
     constructor(private activatedRoute: ActivatedRoute, 
     
     private apiService: ApiService,private router: Router
@@ -32,12 +32,12 @@ export class HomePage {
         this.state = this.router.getCurrentNavigation()?.extras.state;
         this.user = this.state.user;
         console.log(this.user);
-        this.myAngularxQrCode='test';
+        
 
       }
     });
   } 
-
+  
   ngOnInit() {
     this.apiService.obtenerDatos().subscribe((response: any) => {
       this.datos = response;

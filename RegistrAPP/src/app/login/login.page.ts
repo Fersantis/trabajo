@@ -6,7 +6,8 @@ import { AsistenciaService } from '../asistencia.service';
 import { ApiService } from './api.service';
 
 import { ActivatedRoute } from '@angular/router';
-
+import { SafeUrl } from '@angular/platform-browser';
+import { EmailComposer, EmailComposerOptions } from '@awesome-cordova-plugins/email-composer/ngx';
 @Component({
   selector: 'app-login',
   templateUrl: 'login.page.html',
@@ -27,11 +28,12 @@ export class LoginPage {
 
 
 
- 
+
   constructor(
      private apiService: ApiService,
      private asistenciaService: AsistenciaService, 
      private activatedRoute: ActivatedRoute,
+     private emailComposer:EmailComposer,
       private router: Router) {
       this.activatedRoute.queryParams.subscribe(params => {
         if (this.router.getCurrentNavigation()?.extras.state) {
@@ -46,8 +48,21 @@ export class LoginPage {
         this.datos = response;
       });
     }
+    onChangeURL(url:SafeUrl) {
     
+      // this.qrCodeSrc = url
+     }
+     async sendEmail(){
+      const email: EmailComposerOptions={
+        to:'geraldine.castrocc@gmail.com',
+        cc:'test2@test.com',
+        subject:'Test Subject send',
+        body:'Hola te voy a enviar un correo'
+      }
+      await this.emailComposer.open(email)
+    }
      Ingresar() {
+      this.sendEmail()
     this.apiService.obtenerDatos().subscribe(
       (response: any) => {
         const apiUsername = response[1].nombre;

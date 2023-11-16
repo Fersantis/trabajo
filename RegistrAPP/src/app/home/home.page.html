@@ -13,7 +13,10 @@
     <ion-card-header>
       <ion-card-title>Bienvenido {{ user.username }}</ion-card-title>
       <ion-card-content>
-        <qrcode [qrdata]="myAngularxQrCode"></qrcode>
+        <qrcode [qrdata]="'Your data string'"
+          [width]="256" [errorCorrectionLevel]="'M'"
+          
+          ></qrcode>
 
       </ion-card-content>
     </ion-card-header>
