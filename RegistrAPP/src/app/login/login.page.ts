@@ -1,13 +1,17 @@
+
+
+
 import { Component } from '@angular/core';
 
 import { Router, NavigationExtras } from '@angular/router';
-
 import { AsistenciaService } from '../asistencia.service';
-import { ApiService } from './api.service';
+import { ApiService } from '../services/api.service';
 
 import { ActivatedRoute } from '@angular/router';
 import { SafeUrl } from '@angular/platform-browser';
 import { EmailComposer, EmailComposerOptions } from '@awesome-cordova-plugins/email-composer/ngx';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: 'login.page.html',
@@ -15,44 +19,42 @@ import { EmailComposer, EmailComposerOptions } from '@awesome-cordova-plugins/em
 
   
 })
+
 export class LoginPage {
   inputValue: string ='';
   inputValue2: string ='';
   errorMessage: string = '';
-  datos: any[] | undefined;
+  //datos: any[] | undefined;
   state: any;
-
-  user: any;
-
-
-
-
-
+  datos: any[] | undefined;
+  user: string = '';
 
   constructor(
-     private apiService: ApiService,
-     private asistenciaService: AsistenciaService, 
-     private activatedRoute: ActivatedRoute,
-     private emailComposer:EmailComposer,
+    private apiService: ApiService,
+    private asistenciaService: AsistenciaService, 
+  
+    private activatedRoute: ActivatedRoute,
+    private emailComposer:EmailComposer,
       private router: Router) {
-      this.activatedRoute.queryParams.subscribe(params => {
+      /*this.activatedRoute.queryParams.subscribe(params => {
         if (this.router.getCurrentNavigation()?.extras.state) {
           this.state = this.router.getCurrentNavigation()?.extras.state;
           this.user = this.state.user;
           console.log(this.user);
         }
-      });
+      });*/
     } 
     ngOnInit() {
-      this.apiService.obtenerDatos().subscribe((response: any) => {
+      this.apiService.getUsers().subscribe((response: any) => {
         this.datos = response;
       });
     }
+    
     onChangeURL(url:SafeUrl) {
     
       // this.qrCodeSrc = url
-     }
-     async sendEmail(){
+    }
+    async sendEmail(){
       const email: EmailComposerOptions={
         to:'geraldine.castrocc@gmail.com',
         cc:'test2@test.com',
@@ -61,16 +63,18 @@ export class LoginPage {
       }
       await this.emailComposer.open(email)
     }
-     Ingresar() {
+    
+    
+    Ingresar() {
       this.sendEmail()
-    this.apiService.obtenerDatos().subscribe(
+    this.apiService.getEmail().subscribe(
       (response: any) => {
-        const apiUsername = response[1].nombre;
-        const apiPassword = response[1].contrasena;
-        console.log(response[1].nombre);
-        console.log(response[1].contrasena);
-        console.log(response);
-      
+        
+        const foundUser = response.find(
+          user =>
+            user.nombre === this.inputValue && user.contrasena === this.inputValue2
+        );
+
         // Realiza las acciones necesarias con la respuesta de la API
         // Por ejemplo, podrías almacenar los datos del usuario en una variable y pasarlos a la página de inicio
         const userInputUsername = this.inputValue;
@@ -86,7 +90,8 @@ export class LoginPage {
         // Realiza las acciones necesarias cuando los datos son iguales
         const userData = {
           username: apiUsername,
-          password: apiPassword
+          password: apiPassword,
+          rol:apirol
           // Puedes agregar más propiedades según la respuesta de la API
         };
         const navigationExtras: NavigationExtras = {

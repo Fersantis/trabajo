@@ -14,7 +14,7 @@ import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, QRCodeModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy,}, EmailComposer],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy,}, EmailComposer,],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

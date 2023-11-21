@@ -15,7 +15,8 @@
       <ion-card-content>
         <qrcode [qrdata]="'Your data string'"
           [width]="256" [errorCorrectionLevel]="'M'"
-          
+        
+         *ngIf = "showQr"
           ></qrcode>
 
       </ion-card-content>
