@@ -35,14 +35,44 @@ export class LoginPage {
   
     private activatedRoute: ActivatedRoute,
     private emailComposer:EmailComposer,
-      private router: Router) {
-      /*this.activatedRoute.queryParams.subscribe(params => {
-        if (this.router.getCurrentNavigation()?.extras.state) {
-          this.state = this.router.getCurrentNavigation()?.extras.state;
-          this.user = this.state.user;
-          console.log(this.user);
-        }
-      });*/
+    private router: Router) {
+
+    login() {
+        this.apiService.getUsers().subscribe(
+          (response: any[]) => {
+            const foundUser = response.find(
+              (user: any) => user.nombre === this.inputValue && user.contrasena === this.inputValue2
+            );
+    
+            if (foundUser) {
+              const userData = {
+                username: foundUser.nombre,
+                rol: foundUser.rol,
+              };
+    
+              const navigationExtras: NavigationExtras = {
+                state: {
+                  user: userData,
+                },
+              };
+    
+              this.router.navigate(['/home'], navigationExtras);
+            } else {
+              this.errorMessage = 'Credenciales incorrectas';
+            }
+          },
+          error => {
+            console.error('Error al obtener usuarios:', error);
+            this.errorMessage = 'Error al obtener usuarios';
+          }
+        );
+      }
+    
+      recuperarContrasena() {
+        console.log('Ir a la página de recuperación de contraseña');
+        this.router.navigate(['/recuperar']);
+      }
+    }
     } 
     ngOnInit() {
       this.apiService.getUsers().subscribe((response: any) => {
@@ -83,6 +113,9 @@ export class LoginPage {
       
       // Comparar los datos
       if (apiUsername === userInputUsername && apiPassword === userInputPassword) {
+        // Resto del código...
+      }
+      
         // Si son iguales, hacer algo
         console.log('Los datos son iguales');
         
@@ -118,10 +151,5 @@ export class LoginPage {
       
   }
 
-  Recuperarcontrasena() {
-    console.log('llegue');
-    this.router.navigate(['/recuperar']);
-  }
- 
-}
- 
+
+
