@@ -19,60 +19,33 @@ import { EmailComposer, EmailComposerOptions } from '@awesome-cordova-plugins/em
 
   
 })
-
+/
 export class LoginPage {
   inputValue: string ='';
   inputValue2: string ='';
   errorMessage: string = '';
-  //datos: any[] | undefined;
-  state: any;
   datos: any[] | undefined;
-  user: string = '';
+  state: any;
+
+  user: any;
+
+
+
 
   constructor(
-    private apiService: ApiService,
-    private asistenciaService: AsistenciaService, 
-  
-    private activatedRoute: ActivatedRoute,
-    private emailComposer:EmailComposer,
-    private router: Router) {
-
-    login() {
-        this.apiService.getUsers().subscribe(
-          (response: any[]) => {
-            const foundUser = response.find(
-              (user: any) => user.nombre === this.inputValue && user.contrasena === this.inputValue2
-            );
-    
-            if (foundUser) {
-              const userData = {
-                username: foundUser.nombre,
-                rol: foundUser.rol,
-              };
-    
-              const navigationExtras: NavigationExtras = {
-                state: {
-                  user: userData,
-                },
-              };
-    
-              this.router.navigate(['/home'], navigationExtras);
-            } else {
-              this.errorMessage = 'Credenciales incorrectas';
-            }
-          },
-          error => {
-            console.error('Error al obtener usuarios:', error);
-            this.errorMessage = 'Error al obtener usuarios';
-          }
-        );
-      }
-    
-      recuperarContrasena() {
-        console.log('Ir a la página de recuperación de contraseña');
-        this.router.navigate(['/recuperar']);
-      }
-    }
+     private apiService: ApiService,
+     private asistenciaService: AsistenciaService, 
+     
+     private activatedRoute: ActivatedRoute,
+     private emailComposer:EmailComposer,
+      private router: Router) {
+      this.activatedRoute.queryParams.subscribe(params => {
+        if (this.router.getCurrentNavigation()?.extras.state) {
+          this.state = this.router.getCurrentNavigation()?.extras.state;
+          this.user = this.state.user;
+          console.log(this.user);
+        }
+      });
     } 
     ngOnInit() {
       this.apiService.getUsers().subscribe((response: any) => {
@@ -83,8 +56,8 @@ export class LoginPage {
     onChangeURL(url:SafeUrl) {
     
       // this.qrCodeSrc = url
-    }
-    async sendEmail(){
+     }
+     async sendEmail(){
       const email: EmailComposerOptions={
         to:'geraldine.castrocc@gmail.com',
         cc:'test2@test.com',
@@ -93,18 +66,17 @@ export class LoginPage {
       }
       await this.emailComposer.open(email)
     }
-    
-    
-    Ingresar() {
+     Ingresar() {
       this.sendEmail()
-    this.apiService.getEmail().subscribe(
+    this.apiService.getUsers().subscribe(
       (response: any) => {
-        
-        const foundUser = response.find(
-          user =>
-            user.nombre === this.inputValue && user.contrasena === this.inputValue2
-        );
-
+        const apiUsername = response[1].nombre;
+        const apiPassword = response[1].contrasena;
+        const apirol = response[1].rol;
+        console.log(response[1].nombre);
+        console.log(response[1].contrasena);
+        console.log(response);
+      
         // Realiza las acciones necesarias con la respuesta de la API
         // Por ejemplo, podrías almacenar los datos del usuario en una variable y pasarlos a la página de inicio
         const userInputUsername = this.inputValue;
@@ -113,9 +85,6 @@ export class LoginPage {
       
       // Comparar los datos
       if (apiUsername === userInputUsername && apiPassword === userInputPassword) {
-        // Resto del código...
-      }
-      
         // Si son iguales, hacer algo
         console.log('Los datos son iguales');
         
@@ -151,5 +120,10 @@ export class LoginPage {
       
   }
 
-
-
+  Recuperarcontrasena() {
+    console.log('llegue');
+    this.router.navigate(['/recuperar']);
+  }
+ 
+}
+ 
