@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AsistenciaService } from '../asistencia.service';
 import { ApiService } from '../services/api.service';
 import { SafeUrl } from '@angular/platform-browser';
-
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { EmailComposer, EmailComposerOptions } from '@awesome-cordova-plugins/email-composer/ngx';
 
 @Component({
@@ -19,6 +19,7 @@ export class HomePage {
     user: any;
 
     showQr:any;
+    teacher: any;
   
     datos: any[] | undefined;
     qrCodeStr: any;
@@ -26,7 +27,7 @@ export class HomePage {
     
     private apiService: ApiService,private router: Router,
     private emailComposer:EmailComposer,
-    
+    private barcodeScanner: BarcodeScanner,
     
     private asistenciaService: AsistenciaService) {
     this.activatedRoute.queryParams.subscribe(params => {
@@ -36,10 +37,10 @@ export class HomePage {
         console.log(this.user);
         if (this.user.rol=="alumno"){
     
-          this.showQr= false;
+          this.scanCode()
           //
       } else{
-          this.showQr= true
+          this.teacher= true
       }
 
       }
@@ -57,6 +58,18 @@ export class HomePage {
       console.log('Correo abierto correctamente');
     }).catch(error => {
       console.error('Error al abrir el correo', error);
+    });
+  }
+  GenerarQR(){
+    this.showQr=true;
+  }
+
+  scanCode() { // desplige de la camara alumno
+    this.barcodeScanner.scan().then(barcodeData => {
+      console.log('Código escaneado:', barcodeData);
+      //alert('Código escaneado: ' + barcodeData.text);
+    }).catch(err => {
+      console.error('Error al escanear el código de barras', err);
     });
   }
   ngOnInit() {

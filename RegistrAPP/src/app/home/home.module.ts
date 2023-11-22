@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 import { QRCodeModule } from 'angularx-qrcode';
 import { HomePageRoutingModule } from './home-routing.module';
+import { QRScanner } from '@ionic-native/qr-scanner/ngx';
 
 
 @NgModule({
@@ -13,8 +14,12 @@ import { HomePageRoutingModule } from './home-routing.module';
     FormsModule,
     IonicModule,
     QRCodeModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    
   ],
-  declarations: [HomePage]
+
+  declarations: [HomePage],
+  providers: [QRScanner]
 })
 export class HomePageModule {}
+

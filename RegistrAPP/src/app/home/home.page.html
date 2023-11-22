@@ -13,6 +13,7 @@
     <ion-card-header>
       <ion-card-title>Bienvenido {{ user.username }}</ion-card-title>
       <ion-card-content>
+        <button mat-button color="warn"  *ngIf = "teacher" (click)="GenerarQR()">Generar QR</button>
         <qrcode [qrdata]="'Your data string'"
           [width]="256" [errorCorrectionLevel]="'M'"
         

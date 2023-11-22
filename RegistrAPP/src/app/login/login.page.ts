@@ -1,25 +1,19 @@
-
-
-
 import { Component } from '@angular/core';
-
 import { Router, NavigationExtras } from '@angular/router';
 import { AsistenciaService } from '../asistencia.service';
-import { ApiService } from '../services/api.service';
-
+//import { ApiService } from '../services/api.service';
 import { ActivatedRoute } from '@angular/router';
 import { SafeUrl } from '@angular/platform-browser';
 import { EmailComposer, EmailComposerOptions } from '@awesome-cordova-plugins/email-composer/ngx';
-
+import { ApiService } from './api.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: 'login.page.html',
   styleUrls: ['login.page.scss'],
 
-  
 })
-/
+
 export class LoginPage {
   inputValue: string ='';
   inputValue2: string ='';
@@ -28,9 +22,6 @@ export class LoginPage {
   state: any;
 
   user: any;
-
-
-
 
   constructor(
      private apiService: ApiService,
@@ -48,7 +39,7 @@ export class LoginPage {
       });
     } 
     ngOnInit() {
-      this.apiService.getUsers().subscribe((response: any) => {
+      this.apiService.obtenerDatos().subscribe((response: any) => {
         this.datos = response;
       });
     }
@@ -66,17 +57,18 @@ export class LoginPage {
       }
       await this.emailComposer.open(email)
     }
-     Ingresar() {
+    Ingresar() {
       this.sendEmail()
-    this.apiService.getUsers().subscribe(
+    this.apiService.obtenerDatos().subscribe(
       (response: any) => {
-        const apiUsername = response[1].nombre;
+        const apiUsername = response[1].correo;
         const apiPassword = response[1].contrasena;
         const apirol = response[1].rol;
-        console.log(response[1].nombre);
+        console.log(response[1].correo);
         console.log(response[1].contrasena);
         console.log(response);
-      
+        console.log(this.inputValue);
+        console.log(this.inputValue2);
         // Realiza las acciones necesarias con la respuesta de la API
         // Por ejemplo, podrías almacenar los datos del usuario en una variable y pasarlos a la página de inicio
         const userInputUsername = this.inputValue;
@@ -88,7 +80,7 @@ export class LoginPage {
         // Si son iguales, hacer algo
         console.log('Los datos son iguales');
         
-       
+    
         // Realiza las acciones necesarias cuando los datos son iguales
         const userData = {
           username: apiUsername,
@@ -102,7 +94,10 @@ export class LoginPage {
           },
         };
 
-        this.router.navigate(['/home'], navigationExtras);
+        this.router.navigate(['/home'], navigationExtras).then(
+          () => console.log('Redirección exitosa'),
+          (error) => console.error('Error en la redirección:', error)
+        );
 
       } else {
         // Si son diferentes, hacer otra cosa
@@ -124,6 +119,5 @@ export class LoginPage {
     console.log('llegue');
     this.router.navigate(['/recuperar']);
   }
- 
+
 }
- 

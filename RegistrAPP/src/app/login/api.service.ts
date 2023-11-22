@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'http://localhost:8101/asistencias'; // Reemplaza con la URL de tu API
+  private apiUrl = 'http://127.0.0.1:5000/asistencias'; // Reemplaza con la URL de tu API
 
   constructor(private http: HttpClient) {}
 
