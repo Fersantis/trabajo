@@ -1,0 +1,414 @@
+[33mcommit 989bb00e310f8f970cc51378f7dca6f65307c019[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Wed Nov 22 00:40:01 2023 -0300
+
+    .
+
+[33mcommit 6dc63c6fd51a8f33572b3d5cad447473d05b10f4[m
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Tue Nov 21 00:26:04 2023 -0300
+
+    .
+
+[33mcommit cc2f69c0b995b42547a0ab2836ba6d6948c3465f[m
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Tue Nov 21 00:12:08 2023 -0300
+
+    .
+
+[33mcommit 7c086195dfb274f05613e46b6029101b47071290[m
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Mon Nov 20 23:45:07 2023 -0300
+
+    qr
+
+[33mcommit b13f207bc00ef3a2ab5fa5162600aa9fdb7523de[m
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Wed Nov 15 23:33:00 2023 -0300
+
+    .
+
+[33mcommit d0252df28c65ea1c773179c81d9192fbc9c795e9[m
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Sat Nov 11 19:22:06 2023 -0300
+
+    .
+
+[33mcommit 5e38bd40d1d05fef4ce59368673b79cc435e5ff3[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Tue Nov 7 11:46:25 2023 -0300
+
+    añadir codigoqr
+
+[33mcommit 9142c0055d096d23a2d5078752419cffcce75c1b[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Tue Nov 7 11:45:00 2023 -0300
+
+    añadir codigo
+
+[33mcommit 432ffdad2a00f7c9aea060f04ce54365a8b8b227[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Tue Nov 7 11:43:33 2023 -0300
+
+    añadir profesor
+
+[33mcommit 655ecd312973fe5030f69a3ea3795c7a64bdcf67[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Tue Nov 7 11:41:27 2023 -0300
+
+    eliminar algo que no sirve
+
+[33mcommit bb7165085ec695f594f3a4389e8749141bbf71b1[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Tue Oct 31 14:21:23 2023 -0300
+
+    login hay que seguir arreglando
+
+[33mcommit 8a5d70769ec5c11dfae13db4b41e7a0ca64f9cf5[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Tue Oct 31 13:59:09 2023 -0300
+
+    cambio home
+
+[33mcommit 1d4ba4baa1814ee8d23589af14d0f34f4dc4eed3[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Tue Oct 31 13:08:06 2023 -0300
+
+    arreglo e404 :)
+
+[33mcommit 5a732ec2668b21d3c88a99f2e88f380c3ab2f481[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Tue Oct 31 12:43:28 2023 -0300
+
+    arreglo ruta
+
+[33mcommit 5d469acea9c7c2ad4f818c4d9c3e3fe1329c4df3[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Tue Oct 31 12:42:30 2023 -0300
+
+    borrar recuperacion
+
+[33mcommit a1da7e0b25ccec9ac49abbf02d4e3c44afbc4e09[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Fri Oct 20 14:11:05 2023 -0300
+
+    yuju
+
+[33mcommit 65937059b3732489c4ae606aa3cfa26331bbb1bd[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Fri Oct 20 13:14:44 2023 -0300
+
+    ola
+
+[33mcommit aa65bdfffeb2de3f3dc87bdda977b5376865e139[m
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Fri Oct 20 11:22:16 2023 -0300
+
+    .
+
+[33mcommit c9a103e624e7c2ba93fe9e6b3eefdaf2914874a3[m
+Merge: 3ebd13a eb83b4e
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Fri Oct 20 10:46:23 2023 -0300
+
+    Merge branch 'main' of https://github.com/Fersantis/trabajo
+
+[33mcommit 3ebd13a0e12359249be69698aa928ce2fe7c74c0[m
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Fri Oct 20 10:46:20 2023 -0300
+
+    Update e404.page.html
+
+[33mcommit eb83b4e22af9eff61297f6cede2af6ccb32b32b9[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Fri Oct 20 09:30:12 2023 -0300
+
+    intento de arreglar
+
+[33mcommit 24645cc6069477b4893ca0f08fcd69fb704fbce2[m
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Thu Oct 19 23:34:28 2023 -0300
+
+    guard
+
+[33mcommit bfb40019e0f8e1faada549bd3b6b27e71cba9217[m
+Merge: d371c79 189dad2
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Thu Oct 19 23:04:02 2023 -0300
+
+    Merge branch 'main' of https://github.com/Fersantis/trabajo
+
+[33mcommit d371c7927a24cf16fa33c8260fe1522fdef27e0c[m
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Thu Oct 19 22:59:58 2023 -0300
+
+    .
+
+[33mcommit 189dad2c11c26cf57aa9077a363d59791deb4632[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Thu Oct 19 22:57:45 2023 -0300
+
+    :(
+
+[33mcommit be2149d096866109dd849ebef70c7b7e27780806[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Thu Oct 19 22:34:42 2023 -0300
+
+    .
+
+[33mcommit 012032b4f46bffc6c22cb05fcffd783e0ea951f3[m
+Merge: 958b008 1ca6775
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Thu Oct 19 20:48:20 2023 -0300
+
+    Merge branch 'main' of https://github.com/Fersantis/trabajo
+
+[33mcommit 958b008299d2bd6fc050321e0a1ad435d42c5401[m
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Thu Oct 19 20:48:07 2023 -0300
+
+    Update app.module.ts
+
+[33mcommit 1ca67752091748884fb4614c73d4b1d73213c76d[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Thu Oct 19 18:18:32 2023 -0300
+
+    :,)
+
+[33mcommit c289549c31608c1332be0d2929aadd7b6804019c[m
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Wed Oct 18 12:20:14 2023 -0300
+
+    users
+
+[33mcommit 429b117c22906e58e7850867f211b21f66ddd0c1[m
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Wed Oct 18 12:15:06 2023 -0300
+
+    Update asistencia.service.ts
+
+[33mcommit 7904b0f2dabb84866e697d781078cece8162f2d0[m
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Tue Oct 17 18:50:58 2023 -0300
+
+    ,,
+
+[33mcommit dbaf1d5f6dea9e7e2854cffde7698ebcaa90d57e[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Tue Oct 17 12:37:13 2023 -0300
+
+    ....
+
+[33mcommit e282e352c536db5cdff25f472f4507d1f6228bd1[m
+Merge: 29609cc cab5184
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Mon Oct 16 12:27:16 2023 -0300
+
+    Merge branch 'main' of https://github.com/Fersantis/trabajo
+
+[33mcommit 29609cc668d4cb9fb0cfba64fe34adbb4cf55b21[m
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Sun Oct 15 21:56:48 2023 -0300
+
+    bd
+
+[33mcommit cab51849663a138971e32464f3e7a60237744aa5[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Sun Oct 15 19:29:13 2023 -0300
+
+    :))
+
+[33mcommit 7a4419f1b123045a3da0295a0b465b79a1019e6a[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Sun Oct 15 18:39:12 2023 -0300
+
+    :)
+
+[33mcommit 370fa8dd0a275e9fa15b198324acf1cd78b78608[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Sun Oct 15 14:44:47 2023 -0300
+
+    :)
+
+[33mcommit 557172c6bac9eba4e3c423c6e05f85aeedd5b32a[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Sat Oct 14 17:21:01 2023 -0300
+
+    no llorar
+
+[33mcommit 4e1ec60ebf43da7487c6fb3786699901018b81c5[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Sat Oct 14 16:52:32 2023 -0300
+
+    llorar
+
+[33mcommit e2ce3077f59517ed78201bf14ef011d75b38e166[m
+Merge: a2e14d3 b2b0006
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Fri Oct 13 14:44:21 2023 -0300
+
+    Merge branch 'main' of https://github.com/Fersantis/trabajo
+
+[33mcommit a2e14d32924d5198a227054bbb74e318cf8b78b8[m
+Author: Geraldine <geraldine.castrocc@gmail.com>
+Date:   Fri Oct 13 14:44:10 2023 -0300
+
+    d
+
+[33mcommit b2b000660f0c2995317a345902eea466c7129544[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Fri Oct 13 14:34:11 2023 -0300
+
+    yuyju
+
+[33mcommit 8184c6dc46d6e9ed56db775b7c834ef6a341f307[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Fri Oct 13 14:32:16 2023 -0300
+
+    bay
+
+[33mcommit 49490502082d4a38a147a23203ceeeb8fcbcbc0c[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Fri Oct 13 14:11:58 2023 -0300
+
+    hello
+
+[33mcommit 2f4adfc7338caef43005396923e6e3ef750a14e4[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Fri Oct 13 13:56:14 2023 -0300
+
+    etfe4ry
+
+[33mcommit 1dbe10882203ad54780b5d41f2b70d4fee1ced46[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Fri Oct 13 13:55:44 2023 -0300
+
+    dfsedgf
+
+[33mcommit aad5f1752ea80de06c18e2232c13e3bff852ef6b[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Fri Sep 8 14:00:45 2023 -0300
+
+    hola :,)
+
+[33mcommit e28d732359ebceec95da0e630f37ab0f8885754d[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Fri Sep 8 13:49:53 2023 -0300
+
+    commit...
+
+[33mcommit f10a76d165e7ac67591a2647476e08d926d8ed29[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Thu Sep 7 18:24:36 2023 -0300
+
+    commit algo
+
+[33mcommit 4772f3a63e92c634f3ce20253ef2877fb558e92e[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Thu Sep 7 15:09:35 2023 -0300
+
+    commit13
+
+[33mcommit 2c2a74ee56a820c8d7b2715bc0da80f2b345e67d[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Thu Sep 7 11:17:41 2023 -0300
+
+    commit13
+
+[33mcommit b9a42a8a9abd233a5611fef362bccb9f465416a5[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Thu Sep 7 10:04:52 2023 -0300
+
+    commit 12
+
+[33mcommit 07fb15967f7fab1fac458e975d3fe1ea9b12d1ea[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Wed Sep 6 22:14:22 2023 -0300
+
+    commit 11
+
+[33mcommit 1f31edfe42bf384660aebd83c3c975345f627e06[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Wed Sep 6 22:05:28 2023 -0300
+
+    commit 10 creo
+
+[33mcommit 1f6669d2fabb27b93aacae96a879a33509b3805c[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Wed Sep 6 20:13:25 2023 -0300
+
+    commit 10
+
+[33mcommit 08146df58a45ea0e58b962ca58424d4bb26521a3[m
+Author: PANenduoc <129529411+PANenduoc@users.noreply.github.com>
+Date:   Wed Sep 6 19:43:59 2023 -0300
+
+    commit 9
+
+[33mcommit 2d55ecc19b4a040226c427cffe8746d69712b3b3[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Wed Sep 6 12:05:00 2023 -0300
+
+    commit 8?
+
+[33mcommit fcd09099a8cb62a22a43ecdc80067404b1886cad[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Wed Sep 6 11:53:09 2023 -0300
+
+    commit 7
+
+[33mcommit af1b0751a774c8e5efc0284c32b2db784bfd42ef[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Wed Sep 6 11:51:57 2023 -0300
+
+    commit 6
+
+[33mcommit 960fbb625f3ce9726195a5f2165c89a502575652[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Wed Sep 6 11:48:34 2023 -0300
+
+    commit 5
+
+[33mcommit 23f33358cd74e2fd991705890e6f579556d44e26[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Wed Sep 6 11:42:28 2023 -0300
+
+    commit 4
+
+[33mcommit dd5b32f333696518ba92fe26a7ca6e423d1afe2d[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Tue Sep 5 12:47:41 2023 -0300
+
+    commit 3
+
+[33mcommit 79133ef9b33d5d2301d7225e19aa7bdbe16eeaf4[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Tue Sep 5 12:44:10 2023 -0300
+
+    Update login.page.html
+
+[33mcommit bcdbb788d9d794b2963aad5b3e425c72bebd3df9[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Tue Sep 5 12:40:55 2023 -0300
+
+    commit 2
+
+[33mcommit cc7b2a2e0aa6db785088f6051d894a0f1f87e318[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Tue Sep 5 12:22:16 2023 -0300
+
+    commit 1
+
+[33mcommit d95f6c30d3039dab317403dac4dcd21e682fdce1[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Tue Sep 5 11:53:18 2023 -0300
+
+    Update login.page.html
+
+[33mcommit bfa617f8156317959637c1a300b3eab9f3a65fc0[m
+Author: Fersantis <fe.santis@duocuc.cl>
+Date:   Tue Sep 5 11:51:28 2023 -0300
+
+    Primer Commit
+    
+    Mi primer commit

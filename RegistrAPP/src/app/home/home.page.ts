@@ -13,16 +13,18 @@ import { ApiService } from './api.service';
 })
 export class HomePage {
 
-   state: any;
+    state: any;
 
-   user: any;
-   
-   datos: any[] | undefined;
-
-   
-   constructor(private activatedRoute: ActivatedRoute, 
-
+    user: any;
+  
+    datos: any[] | undefined;
+    myAngularxQrCode: any;
+    
+    constructor(private activatedRoute: ActivatedRoute, 
+    
     private apiService: ApiService,private router: Router
+
+    
     
     , private asistenciaService: AsistenciaService) {
     this.activatedRoute.queryParams.subscribe(params => {
@@ -30,6 +32,8 @@ export class HomePage {
         this.state = this.router.getCurrentNavigation()?.extras.state;
         this.user = this.state.user;
         console.log(this.user);
+        this.myAngularxQrCode='test';
+
       }
     });
   } 
@@ -42,4 +46,4 @@ export class HomePage {
 
 
   
- }
+}

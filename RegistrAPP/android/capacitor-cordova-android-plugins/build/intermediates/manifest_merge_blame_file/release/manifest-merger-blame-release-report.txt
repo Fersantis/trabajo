@@ -1,0 +1,30 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:amazon="http://schemas.amazon.com/apk/res/android"
+3    xmlns:android="http://schemas.android.com/apk/res/android"
+4    package="capacitor.cordova.android.plugins" >
+5
+6    <uses-sdk android:minSdkVersion="22" />
+6-->C:\Users\yeri\Documents\GitHub\trabajo\RegistrAPP\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+7
+8    <application>
+8-->C:\Users\yeri\Documents\GitHub\trabajo\RegistrAPP\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:4:1-8:15
+9        <provider
+9-->C:\Users\yeri\Documents\GitHub\trabajo\RegistrAPP\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:5:1-7:12
+10            android:name="de.appplant.cordova.emailcomposer.Provider"
+10-->C:\Users\yeri\Documents\GitHub\trabajo\RegistrAPP\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:5:11-68
+11            android:authorities="${applicationId}.emailcomposer.provider"
+11-->C:\Users\yeri\Documents\GitHub\trabajo\RegistrAPP\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:5:69-130
+12            android:exported="false"
+12-->C:\Users\yeri\Documents\GitHub\trabajo\RegistrAPP\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:5:131-155
+13            android:grantUriPermissions="true" >
+13-->C:\Users\yeri\Documents\GitHub\trabajo\RegistrAPP\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:5:156-190
+14            <meta-data
+14-->C:\Users\yeri\Documents\GitHub\trabajo\RegistrAPP\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:6:3-119
+15                android:name="android.support.FILE_PROVIDER_PATHS"
+15-->C:\Users\yeri\Documents\GitHub\trabajo\RegistrAPP\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:6:14-64
+16                android:resource="@xml/emailcomposer_provider_paths" />
+16-->C:\Users\yeri\Documents\GitHub\trabajo\RegistrAPP\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:6:65-117
+17        </provider>
+18    </application>
+19
+20</manifest>

@@ -7,13 +7,13 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
+  
   <ion-card>
     <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Logo_DuocUC.svg"/>
     <ion-card-header>
       <ion-card-title>Bienvenido {{ user.username }}</ion-card-title>
       <ion-card-content>
-
+        <qrcode [qrdata]="myAngularxQrCode"></qrcode>
 
       </ion-card-content>
     </ion-card-header>
