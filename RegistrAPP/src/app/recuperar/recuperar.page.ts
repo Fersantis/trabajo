@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { EmailComposer, EmailComposerOptions } from '@awesome-cordova-plugins/email-composer/ngx';
 
 @Component({
   selector: 'app-recuperar',
@@ -20,8 +20,11 @@ export class  RecuperarPage {
     }
   }
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private emailComposer:EmailComposer,) {
     // Constructor del componente de recuperación de contraseña
+
   }
 
   recuperarContrasena() {
@@ -30,7 +33,28 @@ export class  RecuperarPage {
     // Redireccionar a la página de inicio de sesión (login)
     this.router.navigate(['login']);
   }
+  ngOnInit() {
+    this.sendEmail(
+      "test@gmail.com",
+      "este es un correo de recuperación de contraseña",
+      "recuperación de contraseña"
 
+    )
+  }
+
+  async sendEmail(emailSend:string, body:string, subject:string){
+      
+    const email: EmailComposerOptions={
+      to:emailSend,
+      subject:subject,
+      body:body
+    }
+    await this.emailComposer.open(email).then(() => {
+      console.log('Correo abierto correctamente');
+    }).catch(error => {
+      console.error('Error al abrir el correo', error);
+    });
+  }
 }
 
   

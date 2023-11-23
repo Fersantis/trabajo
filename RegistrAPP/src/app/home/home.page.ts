@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
 import { AsistenciaService } from '../asistencia.service';
 import { ApiService } from '../services/api.service';
-import { SafeUrl } from '@angular/platform-browser';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
-import { EmailComposer, EmailComposerOptions } from '@awesome-cordova-plugins/email-composer/ngx';
+
 
 @Component({
   selector: 'app-home',
@@ -26,7 +24,6 @@ export class HomePage {
     constructor(private activatedRoute: ActivatedRoute, 
     
     private apiService: ApiService,private router: Router,
-    private emailComposer:EmailComposer,
     private barcodeScanner: BarcodeScanner,
     
     private asistenciaService: AsistenciaService) {
@@ -46,20 +43,6 @@ export class HomePage {
       }
     });
   } 
-  async sendEmail(mail:string){
-      
-    const email: EmailComposerOptions={
-    
-      to:mail,
-      subject:'asistencia a clases',
-      body:'nombre de usuario:'+this.user.username
-    }
-    await this.emailComposer.open(email).then(() => {
-      console.log('Correo abierto correctamente');
-    }).catch(error => {
-      console.error('Error al abrir el correo', error);
-    });
-  }
   GenerarQR(){
     this.showQr=true;
   }

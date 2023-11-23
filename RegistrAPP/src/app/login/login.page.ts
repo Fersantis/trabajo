@@ -3,8 +3,6 @@ import { Router, NavigationExtras } from '@angular/router';
 import { AsistenciaService } from '../asistencia.service';
 //import { ApiService } from '../services/api.service';
 import { ActivatedRoute } from '@angular/router';
-import { SafeUrl } from '@angular/platform-browser';
-import { EmailComposer, EmailComposerOptions } from '@awesome-cordova-plugins/email-composer/ngx';
 import { ApiService } from './api.service';
 
 @Component({
@@ -28,7 +26,7 @@ export class LoginPage {
      private asistenciaService: AsistenciaService, 
      
      private activatedRoute: ActivatedRoute,
-     private emailComposer:EmailComposer,
+     
       private router: Router) {
       this.activatedRoute.queryParams.subscribe(params => {
         if (this.router.getCurrentNavigation()?.extras.state) {
@@ -39,33 +37,18 @@ export class LoginPage {
       });
     } 
     ngOnInit() {
-      this.apiService.obtenerDatos().subscribe((response: any) => {
-        this.datos = response;
-      });
+      
     }
-    
-    onChangeURL(url:SafeUrl) {
-    
-      // this.qrCodeSrc = url
-     }
-     async sendEmail(){
-      const email: EmailComposerOptions={
-        to:'geraldine.castrocc@gmail.com',
-        cc:'test2@test.com',
-        subject:'Test Subject send',
-        body:'Hola te voy a enviar un correo'
-      }
-      await this.emailComposer.open(email)
-    }
+      
     Ingresar() {
-      this.sendEmail()
-    this.apiService.obtenerDatos().subscribe(
+      
+    this.apiService.obtenerDatos(this.inputValue,this.inputValue2).subscribe(
       (response: any) => {
-        const apiUsername = response[1].correo;
-        const apiPassword = response[1].contrasena;
-        const apirol = response[1].rol;
-        console.log(response[1].correo);
-        console.log(response[1].contrasena);
+        const apiUsername = response[0].correo;
+        const apiPassword = response[0].contrasena;
+        const apirol = response[0].rol;
+        console.log(response[0].correo);
+        console.log(response[0].contrasena);
         console.log(response);
         console.log(this.inputValue);
         console.log(this.inputValue2);
