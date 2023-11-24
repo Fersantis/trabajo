@@ -16,7 +16,7 @@ export class AsistenciaService {
   getDatos(): Observable<any> {
     // Realiza la solicitud HTTP utilizando el HttpClient
     // Por ejemplo, aquí se realiza una solicitud GET a una URL determinada
-    const apiUrl = 'http://127.0.0.1:5000/asistencias';
+    const apiUrl = 'https://stsxxdw5-5000.brs.devtunnels.ms/asistencia_duoc';
     return this.http.get<any>(apiUrl);
   }
   
