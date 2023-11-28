@@ -3,11 +3,11 @@ import { NavController } from '@ionic/angular';
 
 
 @Component({
-  selector: 'app-codigoqr',
-  templateUrl: 'codigoqr.page.html',
-  styleUrls: ['codigoqr.page.scss'],
+  selector: 'app-secciones',
+  templateUrl: 'secciones.page.html',
+  styleUrls: ['secciones.page.scss'],
 })
-export class CodigoqrPage {
+export class SeccionesPage {
 
   
 

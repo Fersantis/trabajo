@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CodigoqrPage } from './codigoqr.page';
+import { SeccionesPage } from './secciones.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: CodigoqrPage,
+    component: SeccionesPage,
   }
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class CodigoqrPageRoutingModule {}
+export class SeccionesPageRoutingModule {}

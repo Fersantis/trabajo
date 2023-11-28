@@ -18,7 +18,7 @@ export class ProfesorPage {
   constructor(private navCtrl: NavController) {}
 
   Generarcodigo(){
-    this.navCtrl.navigateForward(['/codigoqr']);
+    this.navCtrl.navigateForward(['/secciones']);
   }
 
 }

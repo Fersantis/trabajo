@@ -26,6 +26,12 @@ const routes: Routes = [
     loadChildren: () => import('./recuperar/recuperar.module').then((m) => m.RecuperarPageModule),
     canActivate: [PagePortegidoGuard]
   },
+
+  {
+    path: 'profesor',
+    loadChildren: () => import('./profesor/profesor.module').then((m) => m.ProfesorPageModule),
+    canActivate: [PagePortegidoGuard]
+  },
   
 
   {
@@ -36,7 +42,8 @@ const routes: Routes = [
   {
     path: '**',
     loadChildren: () => import('./e404/e404.module').then((m) => m.E404PageModule)
-  },  {
+  },
+  {
     path: 'lector-qr',
     loadChildren: () => import('./lector-qr/lector-qr.module').then( m => m.LectorQrPageModule)
   }

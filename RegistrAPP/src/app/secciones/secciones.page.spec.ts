@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { CodigoqrPage } from './Codigoqr.page';
+import { SeccionesPage } from './Secciones.page';
 
-describe('CodigoqrPage', () => {
-  let component: CodigoqrPage;
-  let fixture: ComponentFixture<CodigoqrPage>;
+describe('SeccionesPage', () => {
+  let component: SeccionesPage;
+  let fixture: ComponentFixture<SeccionesPage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CodigoqrPage],
+      declarations: [SeccionesPage],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CodigoqrPage);
+    fixture = TestBed.createComponent(SeccionesPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

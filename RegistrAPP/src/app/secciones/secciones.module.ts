@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { CodigoqrPage } from './codigoqr.page';
+import { SeccionesPage } from './secciones.page';
 
-import { CodigoqrPageRoutingModule } from './codigoqr-routing.module';
+import { SeccionesPageRoutingModule } from './secciones-routing.module';
 
 
 @NgModule({
@@ -12,8 +12,8 @@ import { CodigoqrPageRoutingModule } from './codigoqr-routing.module';
     CommonModule, 
     FormsModule,
     IonicModule,
-    CodigoqrPageRoutingModule
+    SeccionesPageRoutingModule
   ],
-  declarations: [CodigoqrPage]
+  declarations: [SeccionesPage]
 })
-export class CodigoqrPageModule {}
+export class SeccionesPageModule {}
