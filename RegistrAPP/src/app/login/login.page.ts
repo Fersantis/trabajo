@@ -104,7 +104,7 @@ export class LoginPage {
   }
 
   Ingprofe(){
-    this.navCtrl.navigateForward(['/profesor']);
+    this.router.navigate(['/profesor']);
   }
 
 }
