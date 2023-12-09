@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'https://stsxxdw5-5000.brs.devtunnels.ms/'; // Reemplaza con la URL de tu API
+  private apiUrl = 'https://database-test.cpiupqkoat0f.us-east-1.rds.amazonaws.com:3306'; // Reemplaza con la URL de tu API
 
   constructor(private http: HttpClient) {}
 
