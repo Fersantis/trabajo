@@ -29,17 +29,19 @@ export class  RecuperarPage {
 
   recuperarContrasena() {
     // Lógica para recuperar la contraseña
-  
+    const subject = 'Test Subject';
+    const body = 'Test Body';
+    this.sendEmail(this.inputValue4,body,subject)
     // Redireccionar a la página de inicio de sesión (login)
-    this.router.navigate(['login']);
+    //this.router.navigate(['login']);
   }
   ngOnInit() {
-    this.sendEmail(
+    /*this.sendEmail(
       "test@gmail.com",
       "este es un correo de recuperación de contraseña",
       "recuperación de contraseña"
 
-    )
+    )*/
   }
 
   async sendEmail(emailSend:string, body:string, subject:string){

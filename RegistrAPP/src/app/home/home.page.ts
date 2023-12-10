@@ -46,7 +46,14 @@ export class HomePage {
   GenerarQR(){
     this.showQr=true;
   }
-
+  //recibe un string y valida si es profesor o alumno, si muestra el qr es profesor
+  setRolUser(rol:String){
+    if (rol=="alumno"){
+      this.showQr= true
+    } else{
+      this.showQr= false
+    }
+  }
   scanCode() { // desplige de la camara alumno
     this.barcodeScanner.scan().then(barcodeData => {
       console.log('Código escaneado:', barcodeData);

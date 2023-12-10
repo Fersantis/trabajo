@@ -16,7 +16,7 @@ export class AsistenciaService {
   getDatos(): Observable<any> {
     // Realiza la solicitud HTTP utilizando el HttpClient
     // Por ejemplo, aquí se realiza una solicitud GET a una URL determinada
-    const apiUrl = 'https://database-test.cpiupqkoat0f.us-east-1.rds.amazonaws.com:3306/asistencia_duoc';
+    const apiUrl = 'http://localhost:5000/asistencias';
     return this.http.get<any>(apiUrl);
   }
   

@@ -31,8 +31,12 @@ describe('RecuperarPage', () => {
     const subject = 'Test Subject';
     const body = 'Test Body';
     const to = 'test@example.com';
-
-    component.sendEmail(subject, body, to);
+    if (component.inputValue4==to){
+      component.sendEmail(subject, body, to);
+      }
+    else 
+    prompt("correo invalido")
+  //válida el campo value con to
 
     expect(emailComposerSpy.open).toHaveBeenCalledOnceWith({
       to: to,

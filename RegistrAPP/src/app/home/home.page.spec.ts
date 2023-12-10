@@ -33,4 +33,17 @@ describe('HomePage', () => {
     // Verificar que el método del botón haga click
     expect(component.showQr).toBe(true);
   });
+
+
+  it('validacion de rol del usuario logeado como alumno', () => {
+    component.setRolUser("alumno")
+    // Verificar que el método del botón haga click
+    expect(component.showQr).toBe(true);
+  });
+
+  it('validacion de rol del usuario logeado como profesor', () => {
+    component.setRolUser("profesor")
+    // Verificar que el método del botón haga click
+    expect(component.showQr).toBe(false);
+  });
 });
