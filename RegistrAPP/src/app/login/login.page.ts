@@ -69,7 +69,7 @@ export class LoginPage {
           username: apiUsername,
           password: apiPassword,
           rol:apirol
-          // Puedes agregar más propiedades según la respuesta de la API
+       
         };
         const navigationExtras: NavigationExtras = {
           state: {
